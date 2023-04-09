@@ -8,36 +8,63 @@ const [major, minor, patch, label = "0"] = packageJson.version
   // split into version parts
   .split(/[.-]/);
 
-const manifest = defineManifest(async () => ({
-  manifest_version: 3,
-  name: packageJson.displayName ?? packageJson.name,
-  version: `${major}.${minor}.${patch}.${label}`,
-  description: packageJson.description,
-  options_page: "src/pages/options/index.html",
+
+const ServiceWorker = {
   background: { service_worker: "src/pages/background/index.ts" },
+}
+
+const optionsPage = {
+  options_page: "src/pages/options/index.html",
+}
+
+const popupPage = {
   action: {
     default_popup: "src/pages/popup/index.html",
     default_icon: "icons/34x34.png",
   },
+}
+
+const newTabPage = {
   chrome_url_overrides: {
     newtab: "src/pages/newtab/index.html",
   },
-  icons: {
-    "128": "icons/128x128.png",
-  },
+}
+
+const contentPages = {
   content_scripts: [
     {
       matches: ["http://*/*", "https://*/*", "<all_urls>"],
       js: ["src/pages/content/index.tsx"],
     },
   ],
+}
+
+const devToolsPage = {
   devtools_page: "src/pages/devtools/index.html",
+}
+
+const manifest = defineManifest(async () => ({
+  manifest_version: 3,
+  name: packageJson.displayName ?? packageJson.name,
+  version: `${major}.${minor}.${patch}.${label}`,
+  description: packageJson.description,
+  icons: {
+    "128": "icons/128x128.png",
+  },
   web_accessible_resources: [
     {
       resources: ["assets/js/*.js", "assets/css/*.css", "assets/img/*"],
       matches: ["*://*/*"],
     },
   ],
+
+  // Pages
+  // ...optionsPage,
+  // ...ServiceWorker,
+  ...popupPage,
+  // ...newTabPage,
+  // ...contentPages,
+  // ...devToolsPage,
 }));
 
 export default manifest;

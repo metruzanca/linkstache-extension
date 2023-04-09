@@ -10,7 +10,5 @@
     "source.fixAll.eslint": true,
   },
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "prettier.singleQuote": true,
   "debug.internalConsoleOptions": "neverOpen",
 }
