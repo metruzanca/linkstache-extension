@@ -19,6 +19,7 @@
   "dependencies": {
     "crypto-js": "^4.1.1",
     "firebase": "^9.19.1",
+    "solid-icons": "^1.0.4",
     "solid-js": "^1.6.2"
   },
   "devDependencies": {

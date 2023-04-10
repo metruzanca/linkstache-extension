@@ -21,6 +21,7 @@ specifiers:
   fs-extra: 11.1.0
   postcss: ^8.4.19
   sass: ^1.61.0
+  solid-icons: ^1.0.4
   solid-js: ^1.6.2
   ts-loader: 9.4.2
   ts-node: 10.9.1
@@ -32,6 +33,7 @@ specifiers:
 dependencies:
   crypto-js: 4.1.1
   firebase: 9.19.1
+  solid-icons: 1.0.4_solid-js@1.6.2
   solid-js: 1.6.2
 
 devDependencies:
@@ -3682,6 +3684,15 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /solid-icons/1.0.4_solid-js@1.6.2:
+    resolution: {integrity: sha512-gJTp4in3+OYCs9WvDkSLt4Los2unR3Uoder8wjh15GsfP20xiNOLfPTJllXmn+fI8+k3x7bRYtLGIgWd9fUQug==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.6.2
+    dev: false
 
   /solid-js/1.6.2:
     resolution: {integrity: sha512-AZBsj+Yn1xliniTTeuQKG9V7VQVkQ8lZmSKvBjpcVSoZeF7nvt/N5f7Kcsx6QSufioa2YgvBjkIiA0cM0qhotw==}
