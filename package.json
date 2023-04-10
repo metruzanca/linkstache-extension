@@ -17,6 +17,8 @@
   },
   "type": "module",
   "dependencies": {
+    "crypto-js": "^4.1.1",
+    "firebase": "^9.19.1",
     "solid-js": "^1.6.2"
   },
   "devDependencies": {
